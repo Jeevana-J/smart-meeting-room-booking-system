@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="408e9fb2831f4310f42b9cc0deaad3e8" label="Meeting Booking" max_length="40" name="x_2181317_smart_0_meeting_booking" type="collection">
+        <element label="Start Time" max_length="40" name="start_time" type="glide_date_time"/>
+        <element label="Comments" max_length="40" name="comments" type="string"/>
+        <element label="Purpose" max_length="40" name="purpose" type="string"/>
+        <element label="End Time" max_length="40" name="end_time" type="glide_date_time"/>
+        <element label="Number of Participants" max_length="40" name="number_of_participants" type="integer"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Confirmed" sequence="1" value="confirmed"/>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="2" value="cancelled"/>
+            </choice>
+        </element>
+        <element label="Employee" max_length="32" name="employee" reference="sys_user" type="reference"/>
+        <element label="Meeting Room" max_length="32" name="meeting_room" reference="x_2181317_smart_0_meeting_room" type="reference"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+        <index name="index2">
+            <element name="meeting_room"/>
+        </index>
+    </element>
+</database>

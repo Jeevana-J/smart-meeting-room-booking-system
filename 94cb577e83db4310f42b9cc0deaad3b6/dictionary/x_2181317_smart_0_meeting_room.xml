@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="ffbd1772831f4310f42b9cc0deaad3ca" label="Meeting Room" max_length="40" name="x_2181317_smart_0_meeting_room" type="collection">
+        <element choice="1" label="Availability" max_length="40" name="availability" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Maintenance" sequence="2" value="maintenance"/>
+                <element inactive_on_update="false" label="Available" sequence="0" value="available"/>
+                <element inactive_on_update="false" label="Occupied" sequence="1" value="occupied"/>
+            </choice>
+        </element>
+        <element display="true" label="Room Name" max_length="40" name="room_name" type="string"/>
+        <element label="Floor" max_length="40" name="floor" type="integer"/>
+        <element choice="1" label="Room Type" max_length="40" name="room_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Training Room" sequence="1" value="training_room"/>
+                <element inactive_on_update="false" label="Conference Room" sequence="0" value="conference_room"/>
+                <element inactive_on_update="false" label="Meeting Room" sequence="2" value="meeting_room"/>
+            </choice>
+        </element>
+        <element label="Capacity" max_length="40" name="capacity" type="integer"/>
+    </element>
+</database>
